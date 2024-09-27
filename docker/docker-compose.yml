@@ -8,9 +8,9 @@ services:
     ports:
       - '127.0.0.1:8091:8091'
 
-  app:
+  app_clientservice:
     image: '88393ee5c8f9'
-    container_name: spring_application
+    container_name: spring_application_clientservice
     ports:
       - '127.0.0.1:8189:8189'
     environment:
@@ -20,7 +20,7 @@ services:
     depends_on:
       - db
 
-  billservice_app:
+  app_billservice:
     image: 'e6692c05cb52'
     container_name: spring_application_billservice
     ports:
