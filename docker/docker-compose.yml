@@ -2,14 +2,14 @@ version: '3.1'
 
 services:
 
-  app_api_geteway:
-    image: '840456e69594'
+  app-api-geteway:
+    image: '52bd052a251a'
     container_name: spring_application_api_geteway
     ports:
       - '127.0.0.1:8091:8091'
 
-  app_clientservice:
-    image: '88393ee5c8f9'
+  app-clientservice:
+    image: 'c7fbbd3af7a1'
     container_name: spring_application_clientservice
     ports:
       - '127.0.0.1:8189:8189'
@@ -20,7 +20,7 @@ services:
     depends_on:
       - db
 
-  app_billservice:
+  app-billservice:
     image: 'e6692c05cb52'
     container_name: spring_application_billservice
     ports:
@@ -32,8 +32,8 @@ services:
     depends_on:
       - db
 
-  app_userservice:
-    image: '54dfa6620a5e'
+  app-userservice:
+    image: 'e32f4d544e04'
     container_name: spring_application_userservice
     ports:
       - '127.0.0.1:8191:8191'
